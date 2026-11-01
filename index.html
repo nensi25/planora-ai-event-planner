@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#121b2e">
+<title>Planora AI | Celebration, intelligently planned</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#" data-route="dashboard">
+    <span class="brand-symbol">✦</span>
+    <span>planora<small>AI EVENT STUDIO</small></span>
+  </a>
+  <div class="nav-label">WORKSPACE</div>
+  <nav>
+    <button class="nav-link active" data-route="dashboard"><span>⌂</span>Overview</button>
+    <button class="nav-link" data-route="blueprint"><span>✧</span>Event blueprint</button>
+    <button class="nav-link" data-route="budget"><span>◉</span>Budget planner</button>
+    <button class="nav-link" data-route="timeline"><span>☷</span>Timeline</button>
+    <button class="nav-link" data-route="vendors"><span>♧</span>Vendors</button>
+    <button class="nav-link" data-route="guests"><span>♙</span>Guest list</button>
+    <button class="nav-link" data-route="ideas"><span>✿</span>Theme studio</button>
+    <button class="nav-link" data-route="copilot"><span>✦</span>AI copilot</button>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="sidebar-note">
+      <span>✦</span>
+      <b>Make every detail count.</b>
+      <p>Your planning space for meaningful celebrations.</p>
+    </div>
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+      <span id="themeIcon">☽</span>
+      <span id="themeLabel">Dark mode</span>
+    </button>
+    <div class="profile">
+      <div class="avatar">P</div>
+      <div><b>Personal workspace</b><small>Demo mode</small></div>
+    </div>
+  </div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <button class="mobile-menu" id="menuBtn" aria-label="Toggle menu">☰</button>
+  <div class="breadcrumbs">Workspace <span>/</span> <b id="currentPage">Overview</b></div>
+  <div class="top-right">
+    <span class="status"><i></i> Demo workspace</span>
+    <button class="round-btn" id="helpBtn" title="Help">?</button>
+  </div>
+</header>
+<div class="page-wrap"><div id="view" aria-live="polite"></div></div>
+<footer class="footer">PLANORA AI <span>Thoughtful planning. Beautifully done.</span></footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
